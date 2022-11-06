@@ -1,0 +1,83 @@
+:root{
+    font-size: 62.5%;
+    --bg-color: rgb(53, 47, 91);
+    --text-color: #F8F9FA;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+.search-bar>input, 
+.todos,
+.add-todos>input{
+    width: 100%;
+}
+.todos .d-none{
+    display: none;
+}
+body{
+    background-color: var(--bg-color);
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+    max-width: 40rem;
+}
+h1{
+    color: var(--text-color);
+    font-size: 4rem;
+    letter-spacing: 0.1em;
+    padding: 0.4em 0;
+    align-self: center;
+}
+form{
+    width: 100%;
+}
+input[type="text"]{
+    margin: 0.75em 0;
+    padding: 0.7em 1em;
+    border: none;
+    outline: transparent;
+    border-radius: 0.5rem;
+    line-height: 1.5;
+    background: rgba(0, 0, 0, 0.2);
+    transition: outline 100ms ease-in-out;
+}
+input[type="text"]:focus{
+    outline: 0.25em solid #2B3E84;
+}
+.todos{
+    list-style-type: none;
+    margin: 2em 0;
+}
+.todos li{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    padding: 0.8em 01em;
+    background-color: #423A6F;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.todos li:first-child{
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+}
+.todos li:last-child{
+    border-bottom: none;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+}
+.todos i{
+    cursor: pointer;
+}
+.add-todos p{
+    display: inline-block;
+    position: relative;
+    left: 35%;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+}
